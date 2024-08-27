@@ -1,14 +1,6 @@
-from django.contrib.admin import register , ModelAdmin
+from django.contrib import admin
 from cupon_app.models import Cupon
 
-@register(Cupon)
-class CuponAdmin(ModelAdmin):
-    list_display = [
-        'name',
-        'percent',
-        'expire_date',
-    ]
-    search_fields = [
-        'name',
-    ]
+admin.site.register(Cupon)
+
 # Register your models here.

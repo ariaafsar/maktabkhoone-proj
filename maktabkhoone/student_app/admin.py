@@ -1,17 +1,6 @@
-from django.contrib.admin import register , ModelAdmin
+from django.contrib import admin
 from student_app.models import Student
 
-@register(Student)
-class StudentAdmin(ModelAdmin):
-    list_display = [
-        'name',
-        'email',
-        'phone_number',
-        'class1',
-        'cupon',
-        'wallet',
-    ]
-    search_fields = [
-        'name',
-    ]
+admin.site.register(Student)
+
 # Register your models here.
